@@ -5,3 +5,7 @@ This script enables the use of nmap as a means of auditing how long (in days) un
 
 # DISCLAIMER
 Please understand that this was my first attempt at scripting for nmap, in fact, my first attempt at scripting. Period!
+
+# Usage
+
+  nmap --script ssl-cert-expires.nse <host>
