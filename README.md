@@ -8,4 +8,4 @@ Please understand that this was my first attempt at scripting for nmap, in fact,
 
 # Usage
 
-  nmap --script ssl-cert-expires.nse <host>
+  nmap --script ssl-cert-expires.nse /<host/>
