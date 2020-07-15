@@ -2,6 +2,7 @@ local nmap = require "nmap"
 local shortport = require "shortport"
 local sslcert = require "sslcert"
 local stdnse = require "stdnse"
+local datetime = require "datetime"
 local tls = require "tls"
 
 description = [[
@@ -28,7 +29,7 @@ end
 -- function to create a timestamp (in seconds) from the expiry date of the SSL certificate
 function get_cert_exp_timestamp(cert)
   certexpdate = {year=cert.validity.notAfter.year , month=cert.validity.notAfter.month, day=cert.validity.notAfter.day}
-  certexpdatetimestamp = stdnse.date_to_timestamp(certexpdate)
+  certexpdatetimestamp = datetime.date_to_timestamp(certexpdate)
   return certexpdatetimestamp
 end
 
